@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levykauppa Antikvariaatti</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navigation"></div>
+
+    <div class="container">
+        <div id="genres"></div>
+
+        <div class="full-length">
+            <h2>CD:t</h2>
+            <!-- CD-levyt kotimainen-->
+
+            <div class="cd-listing">
+                <p class="mint"><span class="artist">Esimerkki</span>Esimerkki albumista</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // for header
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    // for genres navigation
+    fetch('/genres.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('genres').innerHTML = data;
+        });
+
+    // for footer
+    fetch('/navigation.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navigation').innerHTML = data;
+        });
+</script>
+
+
+</html>

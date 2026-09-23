@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levykauppa Aikakone</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <div id="header">
+    </div>
+
+    <div class="container">
+        <div id="genres"></div>
+
+        <div class="main">
+            <h2>Vinyylit</h2>
+        </div>
+    </div>
+</body>
+
+<script>
+    // for header
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    // for footer
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+
+</html>

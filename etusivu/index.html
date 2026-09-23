@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levykauppa Aikakone</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div id="navigation"></div>
+
+
+    <div class="container">
+        <div id="genres"></div>
+
+        <div class="main">
+            <h3>Vinyylit</h3>
+            <div class="vinyyli">
+                <p class="uusi"><span class="artist">ARTISTI</span>Albumi 5e</p>
+                <p class="mint"><span class="artist">ARTISTI</span>Albumi 5e</p>
+                <p class="ex"><span class="artist">ARTISTI</span>Albumi 5e</p>
+                <p class="vg"><span class="artist">ARTISTI</span>Albumi 5e</p>
+                <p class="good"><span class="artist">ARTISTI</span>Albumi 5e</p>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <h3>CD:t</h3>
+            <div class="cd-listing">
+                <p class="ex"><span class="artist"></span></p>
+                <p class="ex"><span class="artist"></span></p>
+                <p class="ex"><span class="artist"></span></p>
+                <p class="ex"><span class="artist"></span></p>
+                <p class="ex"><span class="artist"></span></p>
+                <p class="ex"><span class="artist"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // for header
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    // for genres
+    fetch('/genres.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('genres').innerHTML = data;
+        });
+
+    // for navigation
+    fetch('/navigation.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navigation').innerHTML = data;
+        });
+
+</script>
+
+</html>
